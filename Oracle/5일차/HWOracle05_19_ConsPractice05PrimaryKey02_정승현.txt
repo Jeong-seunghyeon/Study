@@ -1,0 +1,59 @@
+SQL> insert into dept
+  2  values (10, '영업부', '서울')
+  3  /
+
+1 row created.
+
+SQL> insert into dept
+  2  values (10, '전산부', '대전')
+  3  /
+
+1 row created.
+
+SQL> insert into dept(dname, loc)
+  2  values ('관리부', '부산')
+  3  /
+
+1 row created.
+
+SQL> select * from dept
+  2  /
+
+    DEPTNO DNAME                LOC
+---------- -------------------- --------------------
+        10 영업부               서울
+        10 전산부               대전
+           관리부               부산
+
+
+SQL> @C:\_pythontest01\deptTemp.sql
+
+Table dropped.
+
+
+Recyclebin purged.
+
+
+  1  create table dept(
+  2  deptno number(3),
+  3  dname varchar2(10),
+  4  loc varchar2(10),
+  5  PRIMARY KEY(deptno)
+  6* )
+SQL> /
+
+Table created.
+
+SQL> insert into dept
+  2  values (10, '영업부', '서울')
+  3  /
+
+1 row created.
+
+SQL> insert into dept
+  2  values (10, '관리부', '대전')
+  3  /
+insert into dept
+*
+ERROR at line 1:
+ORA-00001: unique constraint (HR.SYS_C007013) violated

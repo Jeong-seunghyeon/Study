@@ -1,0 +1,14 @@
+  1  CREATE TABLE customer02 (
+  2  id varchar2(20) constraint customer_id_uk unique,
+  3  pwd varchar2(20) constraint customer_pwd_nn NOT NULL,
+  4  name VARCHAR2(20) constraint customer_name_nn NOT NULL,
+  5  phone VARCHAR2(30),
+  6* address varchar2(100))
+SQL> /
+
+Table created.
+
+
+  1  select OWNER, CONSTRAINT_NAME, TABLE_NAME, COLUMN_NAME
+  2  from user_cons_columns
+  3* where table_name = 'CUSTOMER02'

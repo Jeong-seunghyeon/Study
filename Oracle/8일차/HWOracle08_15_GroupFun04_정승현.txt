@@ -1,0 +1,12 @@
+SQL> select ceil(rownum/5) as "그룹번호", sum(sapay) as "급여합", avg(sapay) as "급여평균"
+  2  from sawon
+  3  group by ceil(rownum/5)
+  4  order by ceil(rownum/5)
+  5  /
+
+  그룹번호     급여합   급여평균
+---------- ---------- ----------
+         1      15000       3000
+         2      13003     2600.6
+         3      13106     2621.2
+         4       7209     1441.8

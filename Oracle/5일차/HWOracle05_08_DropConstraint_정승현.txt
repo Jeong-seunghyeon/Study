@@ -1,0 +1,12 @@
+  1  alter table CUSTOMER
+  2* DROP constraint SYS_C006997
+SQL> /
+
+Table altered.
+
+OWNER           CONSTRAINT_NAME           TABLE_NAME      COLUMN_NAME
+--------------- ------------------------- --------------- --------------------
+HR              SYS_C006998               CUSTOMER        PWD
+HR              SYS_C006999               CUSTOMER        NAME
+
+SQL>

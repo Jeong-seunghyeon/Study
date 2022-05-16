@@ -1,0 +1,4 @@
+select salary as "급여", city as "도시"
+from EMP_DETAILS_VIEW
+where city='Southlake'
+/

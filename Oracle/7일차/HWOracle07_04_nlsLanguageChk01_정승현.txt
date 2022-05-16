@@ -1,0 +1,15 @@
+SQL> select TO_CHAR(sysdate,'DAY'), TO_CHAR(sysdate,'DY') from DUAL;
+
+TO_CHAR(SYSDATE,'DAY')   TO_CHAR(
+------------------------ --------
+수요일                   수
+
+SQL> alter session set nls_language='AMERICAN';
+
+Session altered.
+
+SQL> select TO_CHAR(sysdate,'DAY'), TO_CHAR(sysdate,'DY') from DUAL;
+
+TO_CHAR(SYSDATE,'DAY')                                                   TO_CHAR(SYSDATE,'DY')
+------------------------------------------------------------------------ ------------------------
+WEDNESDAY                                                                WED

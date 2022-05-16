@@ -1,0 +1,32 @@
+  1  alter table emp_copy
+  2* drop constraint SYS_C007000
+SQL>
+SQL> /
+
+Table altered.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  alter table emp_copy
+  2* drop constraint SYS_C007001
+SQL> /
+
+Table altered.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  alter table emp_copy
+  2* drop constraint SYS_C007002
+SQL> /
+
+Table altered.
+
+
+  1  select OWNER, CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME
+  2  from user_constraints
+  3* where table_name = 'EMP_COPY'
+SQL> /
+
+no rows selected

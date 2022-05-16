@@ -1,0 +1,5 @@
+  1  insert into emp_copy(EMPLOYEE_ID, FIRST_NAME, HIRE_DATE, MANAGER_ID)
+  2* values (100, 'green', '2022/02/15', 101)
+SQL> /
+
+1 row created.

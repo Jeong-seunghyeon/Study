@@ -1,0 +1,23 @@
+
+
+  1  create table person04(
+  2  ID int PRIMARY KEY,
+  3  LastName varchar2(255) NOT NULL,
+  4  FirstName varchar2(255),
+  5  Age int
+  6* )
+SQL> /
+
+Table created.
+
+SQL>
+
+
+  1  create table orders (
+  2  OrderID int NOT NULL PRIMARY KEY,
+  3  OrderNumber int NOT NULL,
+  4  PersonID int REFERENCES person04(ID)
+  5* )
+SQL> /
+
+Table created.

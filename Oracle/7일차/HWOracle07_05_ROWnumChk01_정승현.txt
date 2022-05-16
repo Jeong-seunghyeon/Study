@@ -1,0 +1,41 @@
+SQL> select ROWNUM, saname
+  2  from sawon;
+
+    ROWNUM SANAME
+---------- --------------------
+         1 홍길동
+         2 한국남
+         3 이순신
+         4 이순라
+         5 놀기만
+         6 류별나
+         7 채시라
+         8 이성계
+         9 무궁화
+        10 임꺽정
+        11 깨똥이
+        12 공부만
+        13 채송화
+        14 류명한
+        15 무궁화
+        16 이미라
+        17 공부해
+        18 최진실
+        19 김유신
+        20 강감찬
+
+20 rows selected.
+
+
+SQL> select ROWNUM, saname
+  2  from sawon
+  3  where ROWNUM < 6
+  4  /
+
+    ROWNUM SANAME
+---------- --------------------
+         1 홍길동
+         2 한국남
+         3 이순신
+         4 이순라
+         5 놀기만

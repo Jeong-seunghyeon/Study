@@ -1,0 +1,45 @@
+SQL> select saname "직원명", deptno "부서번호"
+  2  from sawon
+  3  where saname = '채시라'
+  4  /
+
+직원명                 부서번호
+-------------------- ----------
+채시라                       20
+
+
+SQL> select saname "직원명", deptno "부서번호"
+  2  from sawon
+  3  where deptno = 20
+  4  /
+
+직원명                 부서번호
+-------------------- ----------
+한국남                       20
+이순신                       20
+이순라                       20
+놀기만                       20
+류별나                       20
+채시라                       20
+임꺽정                       20
+
+7 rows selected.
+
+SQL> select saname "직원명", deptno "부서번호"
+  2  from sawon
+  3  where deptno = (select deptno
+  4  from sawon
+  5  where saname='채시라')
+  6  /
+
+직원명                 부서번호
+-------------------- ----------
+한국남                       20
+이순신                       20
+이순라                       20
+놀기만                       20
+류별나                       20
+채시라                       20
+임꺽정                       20
+
+7 rows selected.

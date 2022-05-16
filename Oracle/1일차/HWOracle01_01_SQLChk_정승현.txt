@@ -1,0 +1,29 @@
+## SQL ( standard language >> storing, manipulating, retrieving(저장, 조작, 검색) data in databases.
+
+Our SQL tutorial will teach you how to use MS Access
+
+Oracle, sybase, infomix, Postgres, and other database systems.
+
+
+## What is SQL?
+- SQL : Structured Query Language
+- SQL lets you access and manipulate databases
+- SQL became a standard of the American National Standards Institute(ANSI) in 1986,
+ and of the International Organization for Standardization (ISO) in 1987
+
+##. SQL문장 종류
+
+ - 1) DQL : Data Query Language (질의어)
+         SELECT
+
+ - 2) DML : Data Manipulation Language (데이터 조작어)               ==> Record
+         INSERT, UPDATE,  DELETE
+          (삽입)   (수정)       (삭제)
+ - 3) DDL : Data Definition Language (데이터 정의어)                    ==> 객체- Table, DB, User
+         CREATE, ALTER, DROP, RENAME, TRUNCATE
+           (생성)   (수정)  (삭제)
+ - 4) TCL : Transaction Control Language (트랜잭션 처리어) 
+         COMMIT, ROLLBACK, SAVEPOINT
+
+ - 5) DCL :  Data Control Language (데이터 제어어)
+         GRANT, REVOKE 

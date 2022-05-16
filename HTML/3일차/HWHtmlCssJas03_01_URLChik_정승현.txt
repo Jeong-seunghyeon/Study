@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+ <head>
+ <meta charset='UTF-8'>
+
+<!-- 
+형식 : <a href="url"> link text or image<a>
+※ url 형식
+01. 프로토콜 ://도메인 Or IP:포트번호/경로
+Ex 경로 : *.html
+		http://www.w3schools.com/html/html_link.asp
+		http://subank.biz/srcHongik2021/HongikSejong2021_02_Python00
+		_introduction.jsp#chap1Section3
+		http://www.dothome.co.kr/homepage/maintecance.php
+02. 도메인
+		http://www.naver.com:80,8080/index.html
+		www.naver.com
+		223.130.200.104
+		http://www.naver.com
+		http://www.naver.com:80
+		http://www.naver.com:80/index.htmlx
+		ip : 숫자.숫자.숫자.숫자 >> 문자화 : 도메인

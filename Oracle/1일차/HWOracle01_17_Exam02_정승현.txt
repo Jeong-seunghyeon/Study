@@ -1,0 +1,24 @@
+  1    select EMPLOYEE_ID, FIRST_NAME, JOB_ID
+  2    from EMPLOYEEs
+  3*   where JOB_ID='AD_VP' or JOB_ID='FI_ACCOUNT' or JOB_ID='ST_MAN'
+SQL> /
+
+EMPLOYEE_ID FIRST_NAME                               JOB_ID
+----------- ---------------------------------------- --------------------
+        101 Neena                                    AD_VP
+        102 Lex                                      AD_VP
+        109 Daniel                                   FI_ACCOUNT
+        110 John                                     FI_ACCOUNT
+        111 Ismael                                   FI_ACCOUNT
+        112 Jose Manuel                              FI_ACCOUNT
+        113 Luis                                     FI_ACCOUNT
+        120 Matthew                                  ST_MAN
+        121 Adam                                     ST_MAN
+        122 Payam                                    ST_MAN
+        123 Shanta                                   ST_MAN
+
+EMPLOYEE_ID FIRST_NAME                               JOB_ID
+----------- ---------------------------------------- --------------------
+        124 Kevin                                    ST_MAN
+
+12 rows selected.

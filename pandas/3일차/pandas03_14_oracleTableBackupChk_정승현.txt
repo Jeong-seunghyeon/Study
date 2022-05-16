@@ -1,0 +1,32 @@
+expdp hr/hr directory=tablebackup dumpfile = hr.dmp
+
+hr계정에 테이블 백업
+
+impdp hr/hr directory=tablebackup dumpfile = hr.dmp
+
+백업해논 데이터를 hr계정에 import
+
+
+
+## png, jpb, gig >> 이미지 관련 format 형식
+
+## com, exe, bat >> 실행관련 foramt 형식 (bat : 일관처리 파일)
+
+01. directory / dumpfile : 전체 DB 저장
+02. file 		/ 	table : 개별 Table 저장
+     └ 물리적인 경로	   └ 논리적인 경로 
+
+hrExp.bat / hrIMP.bat
+
+
+## hrEXP.bat
+exp hr/hr file = deptDB.dmp tables = dept
+exp hr/hr file = sawonDB.dmp tables = sawon
+exp hr/hr file = gogekDB.dmp tables = gogek
+
+
+## hrIMP.bat
+
+imp hr/hr file = deptDB.dmp tables = dept
+imp hr/hr file = sawonDB.dmp tables = sawon
+imp hr/hr file = gogekDB.dmp tables = gogek

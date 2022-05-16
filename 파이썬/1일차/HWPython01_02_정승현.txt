@@ -1,0 +1,9 @@
+vid='orange'
+vpwd='1234'
+
+input id = input("id를 입력 하세요 :")
+input pwd = input("Pwd를 입력 하세요 ")
+
+
+if input id==orange:
+	if input pwd==1234:

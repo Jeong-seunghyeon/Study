@@ -1,0 +1,55 @@
+SQL> select last_name, to_char(hire_date, 'DDsp "of" Month YYYY HH:MI:SS AM') hiredate
+  2  from employees
+  3  where rownum < 10;
+
+LAST_NAME                                          HIREDATE
+-------------------------------------------------- ------------------------------------------------------------------------------------------
+King                                               SEVENTEEN of 6월  2003 12:00:00 오전
+Kochhar                                            TWENTY-ONE of 9월  2005 12:00:00 오전
+De Haan                                            THIRTEEN of 1월  2001 12:00:00 오전
+Hunold                                             THREE of 1월  2006 12:00:00 오전
+Ernst                                              TWENTY-ONE of 5월  2007 12:00:00 오전
+Austin                                             TWENTY-FIVE of 6월  2005 12:00:00 오전
+Pataballa                                          FIVE of 2월  2006 12:00:00 오전
+Lorentz                                            SEVEN of 2월  2007 12:00:00 오전
+Greenberg                                          SEVENTEEN of 8월  2002 12:00:00 오전
+
+9 rows selected.
+
+
+SQL> select last_name, to_char(hire_date, 'Ddspth "of" Month YYYY HH:MI:SS AM') hiredate
+  2  from employees
+  3  where rownum < 10;
+
+LAST_NAME                                          HIREDATE
+-------------------------------------------------- ----------------------------------------------------------------------------------------------
+King                                               Seventeenth of 6월  2003 12:00:00 오전
+Kochhar                                            Twenty-First of 9월  2005 12:00:00 오전
+De Haan                                            Thirteenth of 1월  2001 12:00:00 오전
+Hunold                                             Third of 1월  2006 12:00:00 오전
+Ernst                                              Twenty-First of 5월  2007 12:00:00 오전
+Austin                                             Twenty-Fifth of 6월  2005 12:00:00 오전
+Pataballa                                          Fifth of 2월  2006 12:00:00 오전
+Lorentz                                            Seventh of 2월  2007 12:00:00 오전
+Greenberg                                          Seventeenth of 8월  2002 12:00:00 오전
+
+9 rows selected.
+
+
+SQL> select last_name, to_char(hire_date, 'DDspth "of" Month YYYY HH:MI:SS AM') hiredate
+  2  from employees
+  3  where rownum < 10;
+
+LAST_NAME                                          HIREDATE
+-------------------------------------------------- ----------------------------------------------------------------------------------------------
+King                                               SEVENTEENTH of 6월  2003 12:00:00 오전
+Kochhar                                            TWENTY-FIRST of 9월  2005 12:00:00 오전
+De Haan                                            THIRTEENTH of 1월  2001 12:00:00 오전
+Hunold                                             THIRD of 1월  2006 12:00:00 오전
+Ernst                                              TWENTY-FIRST of 5월  2007 12:00:00 오전
+Austin                                             TWENTY-FIFTH of 6월  2005 12:00:00 오전
+Pataballa                                          FIFTH of 2월  2006 12:00:00 오전
+Lorentz                                            SEVENTH of 2월  2007 12:00:00 오전
+Greenberg                                          SEVENTEENTH of 8월  2002 12:00:00 오전
+
+9 rows selected.

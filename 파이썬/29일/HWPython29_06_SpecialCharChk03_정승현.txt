@@ -1,0 +1,53 @@
+## Regular Expression HOWTO.
+** special characters are:
+
+. (Dot.) : charcters except a newline
+^ (Caret.) : start    Ex] [^5] 
+$	     : end Ex] foo.$
+*	     : 0 or more
++	     : 1 or more
+?	     : 0 or 1
+{m}	     : 반복횟수 Ex] a{6} six 'a'
+{m,n}	     : a[3,5] will match from 3 to 5 'a'
+\	     : escapes special character
+[]	     : In a set : >> OR Ex] [abc]
+'-'	     : for example Ex] [a-z] [0-5] 00 to 59, and [0-9A-Fa-f] _ hexadeciaml digit.
+(...)	      : group 
+(?P<name>...) : group name
+(?=...)	     : 
+(?!...)	     : not
+
+----------------------------------------------------------------------------------------------------------
+
+
+\d : decimal digit; this is equivalent to the class [0-9].
+\D : Matches any non-digit [^0-9].    (^이 대괄호 안에 들어가면 Not의 의미)
+\s : whitespace >> [\t, \n, \r, \f, \v]. 
+\S : non-whitespace >> [^ \t, \n, \r, \f, \v].
+\w : alphanumeric character [a-z, A-Z, 0-9]
+\W : non-alphanumeric character [^ a-z, A-Z, 0-9]
+
+
+-------------------------------------------------복잡한 문자열을 처리할때 사용하는 기법
+
+
+match() : beginning of the string.
+search() : lacation where thie RE matches.
+findall() : all substrings >> return them as a list.
+finditer() : all substrings >> return them as an iterator.
+
+
+사용형식 ] 
+
+01. import re
+02. pattrn Compile:
+    Ex]  p = re.compile('[a-z]+')
+
+-----------------------------------------------------------------------------
+
+group() : Return the string
+start()   : Return the starting position of the match
+end()    : Return the ending position of the match
+span()   : (start, end) position of the match
+
+

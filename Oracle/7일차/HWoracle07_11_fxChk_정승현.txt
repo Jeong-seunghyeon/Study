@@ -1,0 +1,34 @@
+SQL> select last_name, hire_date
+  2  from employees
+  3  where hire_date = to_date('May 24, 2007','Month DD, YYYY')
+  4  and rownum < 10;
+
+LAST_NAME                                          HIRE_DAT
+-------------------------------------------------- --------
+Grant                                              07/05/24
+
+SQL>
+
+
+
+
+  1  select last_name, hire_date
+  2  from employees
+  3  where hire_date = to_date('May    24, 2007','fxMonth DD, YYYY')
+  4* and rownum < 10
+SQL> /
+where hire_date = to_date('May    24, 2007','fxMonth DD, YYYY')
+                          *
+ERROR at line 3:
+ORA-01858: a non-numeric character was found where a numeric was expected
+
+
+  1  select last_name, hire_date
+  2  from employees
+  3  where hire_date = to_date('May    24, 2007','fxMonth    DD, YYYY')
+  4* and rownum < 10
+SQL> /
+
+LAST_NAME                                          HIRE_DAT
+-------------------------------------------------- --------
+Grant                                              07/05/24

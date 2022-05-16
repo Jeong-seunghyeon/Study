@@ -1,0 +1,13 @@
+  1  select sajob as "직위", sum(sapay) as "급여합", count(saname) as "인원"
+  2  from sawon
+  3  group by sajob
+  4* order by sajob
+SQL> /
+
+직위                     급여합       인원
+-------------------- ---------- ----------
+과장                      15903          5
+대리                       6006          3
+부장                       8803          3
+사원                      12606          8
+회장                       5000          1

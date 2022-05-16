@@ -1,0 +1,17 @@
+  1  update dept_copy
+  2  set DEPARTMENT_NAME = (select DEPARTMENT_NAME from dept_copy
+  3  where DEPARTMENT_ID = 30 ),
+  4  LOCATION_ID = (select LOCATION_ID from dept_copy
+  5  where DEPARTMENT_ID = 30)
+  6* where DEPARTMENT_ID = 10
+SQL> /
+
+1 row updated.
+
+SQL> select DEPARTMENT_ID, LOCATION_ID from dept_copy
+  2  where DEPARTMENT_ID = 10
+  3  /
+
+DEPARTMENT_ID LOCATION_ID
+------------- -----------
+           10        1700

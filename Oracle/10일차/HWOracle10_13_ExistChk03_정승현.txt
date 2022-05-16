@@ -1,0 +1,18 @@
+  1  select s1.deptno "부서번호", s1.saname "이름"
+  2  from sawon s1
+  3  where exists
+  4  (select *
+  5  from sawon s2
+  6* where s2.sajob='회장' and s1.deptno = s2.deptno)
+SQL> /
+
+  부서번호 이름
+---------- --------------------
+        10 최진실
+        10 무궁화
+        10 류명한
+        10 깨똥이
+        10 무궁화
+        10 홍길동
+
+6 rows selected.

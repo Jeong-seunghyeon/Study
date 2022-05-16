@@ -1,0 +1,25 @@
+  1  select dname "부서명", deptno "부서번호"
+  2  from dept where exists
+  3* (select deptno from sawon)
+SQL> /
+
+부서명                 부서번호
+-------------------- ----------
+영업부                       10
+총무부                       30
+전산부                       40
+관리부                       20
+
+
+==============================================
+
+SQL> select dname "부서명", deptno "부서번호"
+  2  from dept where exists
+  3  (select * from sawon where dept.deptno = sawon.deptno)
+  4  /
+
+부서명                 부서번호
+-------------------- ----------
+영업부                       10
+관리부                       20
+총무부                       30

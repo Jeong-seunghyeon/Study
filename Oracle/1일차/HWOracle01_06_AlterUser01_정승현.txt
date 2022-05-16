@@ -1,0 +1,21 @@
+SQL> alter user hr account unlock;
+
+User altered.
+
+SQL> alter user hr identified by hr
+  2  alter user hr identified by hr;
+alter user hr identified by hr
+*
+ERROR at line 2:
+ORA-00922: missing or invalid option
+
+
+SQL> alter user hr identified by hr;
+
+User altered.
+
+SQL> conn hr/hr
+Connected.
+SQL> show user
+USER is "HR"
+SQL>

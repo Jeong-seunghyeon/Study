@@ -1,0 +1,107 @@
+#HWPython17_03_AutiMachine_step03_정승현.py
+
+
+while True:
+	print('*'*6,'우송 대학교 과일 판매 머신 V01','*'*6)
+	print("1. orange     : 1000원")
+	print("2. strawberry : 2500원")
+	print("3. peach      : 1500원")
+	print("4. mango      : 2000원")
+	print("5. grape      : 2000원")
+	print("6. 종료")
+	print("="*50)
+	fruit=int(input('구매번호를 입력하세요. 1~6 : '))
+	if fruit == 1:
+		print('입력하신 번호는  1 입니다.')
+		money = int(input('코인을 투입하세요. : '))
+		print('투입된 금액은', money, '원 입니다.')
+		print('=' * 50)
+		print('선택한 과일 : 1')
+		print('받은 금액' , money)
+		print('='*5,'거스름돈','='*5)
+		change = money - int(1000)
+		print('거스름돈은', change, '입니다.')
+		a = int(change/5000)
+		b = int((change-(a*5000)) / 1000)
+		c = int((change-(a*5000 + b*1000)) / 500)
+		print('5000원 : ',a,'개')
+		print('1000원 : ',b,'개')
+		print('500원 : ',c,'개')
+	elif fruit == 2:
+		print('입력하신 번호는  2 입니다.')
+		money = int(input('코인을 투입하세요. : '))
+		print('투입된 금액은', money, '원 입니다.')
+		print('=' * 50)
+		print('선택한 과일 : 2')
+		print('받은 금액' , money)
+		print('='*5,'거스름돈','='*5)
+		change = money - int(2500)
+		print('거스름돈은', change, '입니다.')
+		a = int(change/5000)
+		b = int((change-(a*5000)) / 1000)
+		c = int((change-(a*5000 + b*1000)) / 500)
+		print('5000원 : ',a,'개')
+		print('1000원 : ',b,'개')
+		print('500원 : ',c,'개')
+	elif fruit == 3:
+		print('입력하신 번호는  3 입니다.')
+		money = int(input('코인을 투입하세요. : '))
+		print('투입된 금액은', money, '원 입니다.')
+		print('=' * 50)
+		print('선택한 과일 : 3')
+		print('받은 금액' , money)
+		print('='*5,'거스름돈','='*5)
+		change = money - int(1500)
+		print('거스름돈은', change, '입니다.')
+		a = int(change/5000)
+		b = int((change-(a*5000)) / 1000)
+		c = int((change-(a*5000 + b*1000)) / 500)
+		print('5000원 : ',a,'개')
+		print('1000원 : ',b,'개')
+		print('500원 : ',c,'개')
+	elif fruit == 4:
+		print('입력하신 번호는  4 입니다.')
+		money = int(input('코인을 투입하세요. : '))
+		print('투입된 금액은', money, '원 입니다.')
+		print('=' * 50)
+		print('선택한 과일 : 4')
+		print('받은 금액' , money)
+		print('='*5,'거스름돈','='*5)
+		change = money - int(2000)
+		print('거스름돈은', change, '입니다.')
+		a = int(change/5000)
+		b = int((change-(a*5000)) / 1000)
+		c = int((change-(a*5000 + b*1000)) / 500)
+		print('5000원 : ',a,'개')
+		print('1000원 : ',b,'개')
+		print('500원 : ',c,'개')
+	elif fruit == 5:
+		print('입력하신 번호는  5 입니다.')
+		money = int(input('코인을 투입하세요. : '))
+		print('투입된 금액은', money, '원 입니다.')
+		print('=' * 50)
+		print('선택한 과일 : 5')
+		print('받은 금액' , money)
+		print('='*5,'거스름돈','='*5)
+		change = money - int(2000)
+		print('거스름돈은', change, '입니다.')
+		a = int(change/5000)
+		b = int((change-(a*5000)) / 1000)
+		c = int((change-(a*5000 + b*1000)) / 500)
+		print('5000원 : ',a,'개')
+		print('1000원 : ',b,'개')
+		print('500원 : ',c,'개')
+	elif fruit == 9:
+		print('종료합니다')
+		exit()
+	else :
+		print('입력하신 번호를 확인하세요')
+
+	
+	
+
+
+
+
+
+		

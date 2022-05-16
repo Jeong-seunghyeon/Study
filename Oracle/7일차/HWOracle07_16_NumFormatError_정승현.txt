@@ -1,0 +1,13 @@
+SQL> select to_char(457803.254, '$99,999.00') salary
+  2  from dual;
+
+SALARY
+----------------------
+###########
+
+SQL> select to_char(45.254, '$99,999.00') salary
+  2  from dual;
+
+SALARY
+----------------------
+     $45.25

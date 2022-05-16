@@ -1,0 +1,57 @@
+SQL> select * from employees
+  2  where rownum < 3;
+
+EMPLOYEE_ID FIRST_NAME                               LAST_NAME                                          EMAIL
+                                           PHONE_NUMBER
+----------- ---------------------------------------- -------------------------------------------------- -------------------------------------------------- ----------------------------------------
+HIRE_DATE       JOB_ID                   SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+--------------- -------------------- ---------- -------------- ---------- -------------
+        100 Steven                                   King                                               SKING
+                                           515.123.4567
+2003-6월 -3     AD_PRES                   24000                                      90
+
+        101 Neena                                    Kochhar                                            NKOCHHAR
+                                           515.123.4568
+2005-9월 -4     AD_VP                     17000                       100            90
+
+
+SQL> select employee_id, to_char(hire_date,'MM/Y') month_hired
+  2  from employees
+  3  where rownum < 3;
+
+EMPLOYEE_ID MONTH_HI
+----------- --------
+        100 06/3
+        101 09/5
+
+SQL> select employee_id, to_char(hire_date,'year') month_hired
+  2  from employees
+  3  where rownum < 3;
+
+EMPLOYEE_ID MONTH_HIRED
+----------- ------------------------------------------------------------------------------------
+        100 two thousand three
+        101 two thousand five
+
+
+SQL> select employee_id, to_char(hire_date,'MM/YY') month_hired
+  2  from employees
+  3  where rownum < 3;
+
+EMPLOYEE_ID MONTH_HIRE
+----------- ----------
+        100 06/03
+        101 09/05
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  select employee_id, to_char(hire_date,'MM/YYYY') month_hired
+  2  from employees
+  3* where rownum < 3
+SQL> /
+
+EMPLOYEE_ID MONTH_HIRED
+----------- --------------
+        100 06/2003
+        101 09/2005

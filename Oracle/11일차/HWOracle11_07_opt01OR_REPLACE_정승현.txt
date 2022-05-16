@@ -1,0 +1,61 @@
+연습01
+========================================================
+
+SQL> create view v_sawonjob01 as
+  2  (select sabun, saname, deptno, sajob
+  3  from sawon_second
+  4  where sajob='사원')
+  5  /
+
+View created.
+========================================================
+연습02
+========================================================
+  1  create view v_sawonjob01 as
+  2  (select sabun, saname, deptno, sajob
+  3  from sawon_second
+  4* where sajob='사원')
+SQL> /
+create view v_sawonjob01 as
+            *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+========================================================
+연습03
+========================================================
+SQL> create or replace view v_sawonjob01 as
+  2  (select sabun, saname, sajob
+  3  from sawon_second
+  4  where sajob='사원')
+  5  /
+
+View created.
+========================================================
+연습04
+========================================================
+SQL> select view_name, text
+  2  from user_views;
+
+VIEW_NAME            TEXT
+-------------------- --------------------------------------------------------------------------------
+EMP_DETAILS_VIEW     SELECT
+                       e.employee_id,
+                       e.job_id,
+                       e.manager_id,
+                       e.department_id,
+                       d.locat
+
+VIEWSAWON10          select sabun, saname, deptno, sapay
+                     from sawon
+                     where deptno=10
+
+V_SAWONJOB01         (select sabun, saname, sajob
+                     from sawon_second
+                     where sajob='사원')
+
+V_SAWON_COMPLEX      (select sawon.saname, dept.dname, dept.loc
+                     from sawon_second sawon, dept_second
+
+V_SAWON_SALARY       (select deptno, sum(sapay) as sal_sum, avg(sapay) as sal_avg
+                     from sawon_second
+                     g

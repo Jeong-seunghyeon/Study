@@ -1,0 +1,16 @@
+## SQL constraints are used to specify rules for data in a table.
+
+## SQL Create Constraints
+01. table is created
+02. after the table is created with the ALTER TABLE statement.
+
+## SQL Constraints
+- limit.
+
+- ensures the accuracy and reliability of the data in the table.
+	       정확성과 신뢰성 보장 !!!!
+
+- If there is any violation between the constraint and the data action, the action is aborted.
+
+- column level or table level.
+  Column level constraints apply to a column, and table level constraints apply to the whole table.

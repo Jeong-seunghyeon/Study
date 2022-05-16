@@ -1,0 +1,15 @@
+## Machine Leaning
+01- Machine Learning is making the computer learn from studing data and statistics.
+=> 데이터와 통계
+
+02- Machine Learning is a step into the direcion of 
+=> artificial intelligence (AI)
+
+03- Machine Learning is a program that analyses data and learns to predict the outcome.
+=> 데이터분석 하고 결과 예측
+
+## Where To Start?
+
+01. In this yutorial we will go back to mathmatics and syudy statistics, and how to calculate important numbers based on data sets.
+02. We will also learn how to use various Python modules to get the answers e need.
+03. And we will learn how to make functions that are able to predict the outcome based on what we have learned.

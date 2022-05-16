@@ -1,0 +1,57 @@
+  1  select OWNER, CONSTRAINT_NAME, TABLE_NAME, CONSTRAINT_TYPE
+  2  from user_constraints
+  3* where table_name = 'DEPARTMENTS'
+SQL> /
+
+OWNER           CONSTRAINT_NAME           TABLE_NAME      CONSTRAINT_TYPE
+--------------- ------------------------- --------------- ---------------
+HR              DEPT_NAME_NN              DEPARTMENTS     C
+HR              DEPT_ID_PK                DEPARTMENTS     P
+HR              DEPT_LOC_FK               DEPARTMENTS     R
+HR              DEPT_MGR_FK               DEPARTMENTS     R
+
+
+  1  select OWNER, CONSTRAINT_NAME, TABLE_NAME, CONSTRAINT_TYPE
+  2  from user_constraints
+  3* where table_name = 'EMPLOYEES'
+SQL> /
+
+OWNER           CONSTRAINT_NAME           TABLE_NAME      CONSTRAINT_TYPE
+--------------- ------------------------- --------------- ---------------
+HR              EMP_LAST_NAME_NN          EMPLOYEES       C
+HR              EMP_EMAIL_NN              EMPLOYEES       C
+HR              EMP_HIRE_DATE_NN          EMPLOYEES       C
+HR              EMP_JOB_NN                EMPLOYEES       C
+HR              EMP_SALARY_MIN            EMPLOYEES       C
+HR              EMP_EMAIL_UK              EMPLOYEES       U
+HR              EMP_EMP_ID_PK             EMPLOYEES       P
+HR              EMP_DEPT_FK               EMPLOYEES       R
+HR              EMP_JOB_FK                EMPLOYEES       R
+HR              EMP_MANAGER_FK            EMPLOYEES       R
+
+10 rows selected.
+
+
+
+  1  select OWNER, CONSTRAINT_NAME, TABLE_NAME, CONSTRAINT_TYPE
+  2  from user_constraints
+  3* where table_name = 'DEPT_COPY'
+SQL> /
+
+OWNER           CONSTRAINT_NAME           TABLE_NAME      CONSTRAINT_TYPE
+--------------- ------------------------- --------------- ---------------
+HR              SYS_C006999               DEPT_COPY       C
+
+
+
+  1  select OWNER, CONSTRAINT_NAME, TABLE_NAME, CONSTRAINT_TYPE
+  2  from user_constraints
+  3* where table_name = 'EMP_COPY'
+SQL> /
+
+OWNER           CONSTRAINT_NAME           TABLE_NAME      CONSTRAINT_TYPE
+--------------- ------------------------- --------------- ---------------
+HR              SYS_C007000               EMP_COPY        C
+HR              SYS_C007001               EMP_COPY        C
+HR              SYS_C007002               EMP_COPY        C
+HR              SYS_C007003               EMP_COPY        C

@@ -1,0 +1,41 @@
+create teble dept(
+deptno number(3),
+dname varchar2(10) check(dname in ('전산부,'영업부')),
+loc varchar2(10)
+)
+/
+
+
+
+SQL> insert into dept
+  2  values (10, 'yeongup', 'seoul')
+  3  /
+
+1 row created.
+
+
+
+
+    DEPTNO DNAME                LOC
+---------- -------------------- --------------------
+        10 yeongup              seoul
+
+SQL> insert into dept
+  2  values (10, 'jeonsan', 'daejeon')
+  3  /
+
+1 row created.
+
+SQL> insert into dept
+  2  values (30, 'gwanli', 'daegu')
+  3  /
+insert into dept
+*
+ERROR at line 1:
+ORA-02290: check constraint (HR.SYS_C007010) violated
+
+
+    DEPTNO DNAME                LOC
+---------- -------------------- --------------------
+        10 yeongup              seoul
+        10 jeonsan              daejeon

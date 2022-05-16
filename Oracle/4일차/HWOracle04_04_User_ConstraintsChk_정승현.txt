@@ -1,0 +1,50 @@
+SQL> column owner format a15;
+SQL> column TABLE_NAME format a20;
+SQL> column CONSTRAINTS_NAME format a25;
+SQL> select OWNER, TABLE_NAME, CONSTRAINT_TYPE
+  2  from USER_CONSTRAINTS;
+
+OWNER           TABLE_NAME           CO
+--------------- -------------------- --
+HR              REGIONS              C
+HR              REGIONS              P
+HR              COUNTRIES            C
+HR              COUNTRIES            P
+HR              COUNTRIES            R
+HR              LOCATIONS            C
+HR              LOCATIONS            P
+HR              LOCATIONS            R
+HR              DEPARTMENTS          C
+HR              DEPARTMENTS          P
+HR              DEPARTMENTS          R
+HR              JOBS                 C
+HR              JOBS                 P
+HR              EMPLOYEES            C
+HR              EMPLOYEES            C
+HR              EMPLOYEES            C
+HR              EMPLOYEES            C
+HR              EMPLOYEES            C
+HR              EMPLOYEES            U
+HR              EMPLOYEES            P
+HR              EMPLOYEES            R
+HR              EMPLOYEES            R
+HR              EMPLOYEES            R
+HR              DEPARTMENTS          R
+HR              JOB_HISTORY          C
+HR              JOB_HISTORY          C
+HR              JOB_HISTORY          C
+
+OWNER           TABLE_NAME           CO
+--------------- -------------------- --
+HR              JOB_HISTORY          C
+HR              JOB_HISTORY          C
+HR              JOB_HISTORY          P
+HR              JOB_HISTORY          R
+HR              JOB_HISTORY          R
+HR              JOB_HISTORY          R
+HR              EMP_DETAILS_VIEW     O
+HR              DEPT_COPY            C
+HR              EMP_COPY             C
+HR              EMP_COPY             C
+HR              EMP_COPY             C
+HR              EMP_COPY             C

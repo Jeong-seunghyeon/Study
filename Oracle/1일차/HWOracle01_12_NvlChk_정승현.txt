@@ -1,0 +1,3 @@
+select nvl(COMMISSION_PCT, 0)+1
+from EMPLOYEEs
+/

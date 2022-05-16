@@ -1,0 +1,34 @@
+SQL> select * from nls_session_parameters
+  2  where parameter = 'NLS_DATE_FORMAT';
+
+PARAMETER
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+VALUE
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NLS_DATE_FORMAT
+RR/MM/DD
+
+
+
+SQL> insert into datetest values ('220304')
+  2  /
+
+1 row created.
+
+SQL> insert into datetest values('22/03/01');
+
+1 row created.
+
+SQL> insert into datetest values('22-03-02');
+
+1 row created.
+
+SQL> insert into datetest values('20220303');
+
+1 row created.
+
+SQL> insert into datetest values('03-05-2022');
+insert into datetest values('03-05-2022')
+                            *
+ERROR at line 1:
+ORA-01830: date format picture ends before converting entire input string

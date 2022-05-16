@@ -1,0 +1,77 @@
+SQL> select saname "이름", sapay "급여", sajob "직급"
+  2  from sawon
+  3  where sapay > (select max(sapay)
+  4  from sawon
+  5  where sajob = '대리')
+  6  /
+
+이름                       급여 직급
+-------------------- ---------- --------------------
+홍길동                     5000 회장
+한국남                     3000 부장
+이순신                     3500 과장
+채시라                     3400 사원
+이성계                     2803 부장
+무궁화                     3000 부장
+깨똥이                     4500 과장
+공부만                     4003 과장
+
+8 rows selected.
+
+
+  1  select saname "이름", sapay "급여", sajob "직급"
+  2  from sawon
+  3  where sapay > all (select distinct sapay
+  4  from sawon
+  5* where sajob = '대리')
+SQL> /
+
+이름                       급여 직급
+-------------------- ---------- --------------------
+이성계                     2803 부장
+무궁화                     3000 부장
+한국남                     3000 부장
+채시라                     3400 사원
+이순신                     3500 과장
+공부만                     4003 과장
+깨똥이                     4500 과장
+홍길동                     5000 회장
+
+8 rows selected.
+
+
+SQL> select saname "이름", sapay "급여", sajob "직급"
+  2  from sawon
+  3  where sapay < all (select distinct sapay
+  4  from sawon
+  5  where sajob = '대리')
+  6  /
+
+이름                       급여 직급
+-------------------- ---------- --------------------
+류별나                     1600 과장
+공부해                     1303 사원
+이순라                     1200 사원
+무궁화                     1100 사원
+강감찬                     1003 사원
+김유신                      400 사원
+
+6 rows selected.
+
+SQL> select saname "이름", sapay "급여", sajob "직급"
+  2  from sawon
+  3  where sapay < (select min(sapay)
+  4  from sawon
+  5  where sajob = '대리')
+  6  /
+
+이름                       급여 직급
+-------------------- ---------- --------------------
+이순라                     1200 사원
+류별나                     1600 과장
+무궁화                     1100 사원
+공부해                     1303 사원
+김유신                      400 사원
+강감찬                     1003 사원
+
+6 rows selected.

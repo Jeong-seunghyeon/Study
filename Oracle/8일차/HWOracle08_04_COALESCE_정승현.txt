@@ -1,0 +1,188 @@
+SQL> select first_name, coalesce(commission_pct, commission_pct,1)
+  2  from employees
+  3  /
+
+FIRST_NAME                               COALESCE(COMMISSION_PCT,COMMISSION_PCT,1)
+---------------------------------------- -----------------------------------------
+Steven                                                                           1
+Neena                                                                            1
+Lex                                                                              1
+Alexander                                                                        1
+Bruce                                                                            1
+David                                                                            1
+Valli                                                                            1
+Diana                                                                            1
+Nancy                                                                            1
+Daniel                                                                           1
+John                                                                             1
+Ismael                                                                           1
+Jose Manuel                                                                      1
+Luis                                                                             1
+Den                                                                              1
+Alexander                                                                        1
+Shelli                                                                           1
+Sigal                                                                            1
+Guy                                                                              1
+Karen                                                                            1
+Matthew                                                                          1
+Adam                                                                             1
+Payam                                                                            1
+Shanta                                                                           1
+Kevin                                                                            1
+Julia                                                                            1
+Irene                                                                            1
+
+FIRST_NAME                               COALESCE(COMMISSION_PCT,COMMISSION_PCT,1)
+---------------------------------------- -----------------------------------------
+James                                                                            1
+Steven                                                                           1
+Laura                                                                            1
+Mozhe                                                                            1
+James                                                                            1
+TJ                                                                               1
+Jason                                                                            1
+Michael                                                                          1
+Ki                                                                               1
+Hazel                                                                            1
+Renske                                                                           1
+Stephen                                                                          1
+John                                                                             1
+Joshua                                                                           1
+Trenna                                                                           1
+Curtis                                                                           1
+Randall                                                                          1
+Peter                                                                            1
+John                                                                            .4
+Karen                                                                           .3
+Alberto                                                                         .3
+Gerald                                                                          .3
+Eleni                                                                           .2
+Peter                                                                           .3
+David                                                                          .25
+Peter                                                                          .25
+Christopher                                                                     .2
+
+FIRST_NAME                               COALESCE(COMMISSION_PCT,COMMISSION_PCT,1)
+---------------------------------------- -----------------------------------------
+Nanette                                                                         .2
+Oliver                                                                         .15
+Janette                                                                        .35
+Patrick                                                                        .35
+Allan                                                                          .35
+Lindsey                                                                         .3
+Louise                                                                          .3
+Sarath                                                                         .25
+Clara                                                                          .25
+Danielle                                                                       .15
+Mattea                                                                          .1
+David                                                                           .1
+Sundar                                                                          .1
+Amit                                                                            .1
+Lisa                                                                           .25
+Harrison                                                                        .2
+Tayler                                                                          .2
+William                                                                        .15
+Elizabeth                                                                      .15
+Sundita                                                                         .1
+Ellen                                                                           .3
+Alyssa                                                                         .25
+Jonathon                                                                        .2
+Jack                                                                            .2
+Kimberely                                                                      .15
+Charles                                                                         .1
+Winston                                                                          1
+
+FIRST_NAME                               COALESCE(COMMISSION_PCT,COMMISSION_PCT,1)
+---------------------------------------- -----------------------------------------
+Jean                                                                             1
+Martha                                                                           1
+Girard                                                                           1
+Nandita                                                                          1
+Alexis                                                                           1
+Julia                                                                            1
+Anthony                                                                          1
+Kelly                                                                            1
+Jennifer                                                                         1
+Timothy                                                                          1
+Randall                                                                          1
+Sarah                                                                            1
+Britney                                                                          1
+Samuel                                                                           1
+Vance                                                                            1
+Alana                                                                            1
+Kevin                                                                            1
+Donald                                                                           1
+Douglas                                                                          1
+Jennifer                                                                         1
+Michael                                                                          1
+Pat                                                                              1
+Susan                                                                            1
+Hermann                                                                          1
+Shelley                                                                          1
+William                                                                          1
+
+107 rows selected.
+
+SQL>
+
+
+
+  1  select first_name, salary, coalesce(1.1+commission_pct, 1) as "Bonus", salary*coalesce(commission_pct+0.1, commission_pct+0.1, 0.1) as "vBonus", (salary*12+salary*coalesce(commission_pct, commission_pct, 0.1))as "PAY"
+  2  from employees
+  3* where rownum<50
+SQL> /
+
+FIRST_NAME                                   SALARY      Bonus     vBonus        PAY
+---------------------------------------- ---------- ---------- ---------- ----------
+Steven                                        24000          1       2400     290400
+Neena                                         17000          1       1700     205700
+Lex                                           17000          1       1700     205700
+Alexander                                      9000          1        900     108900
+Bruce                                          6000          1        600      72600
+David                                          4800          1        480      58080
+Valli                                          4800          1        480      58080
+Diana                                          4200          1        420      50820
+Nancy                                         12008          1     1200.8   145296.8
+Daniel                                         9000          1        900     108900
+John                                           8200          1        820      99220
+Ismael                                         7700          1        770      93170
+Jose Manuel                                    7800          1        780      94380
+Luis                                           6900          1        690      83490
+Den                                           11000          1       1100     133100
+Alexander                                      3100          1        310      37510
+Shelli                                         2900          1        290      35090
+Sigal                                          2800          1        280      33880
+Guy                                            2600          1        260      31460
+Karen                                          2500          1        250      30250
+Matthew                                        8000          1        800      96800
+Adam                                           8200          1        820      99220
+Payam                                          7900          1        790      95590
+Shanta                                         6500          1        650      78650
+Kevin                                          5800          1        580      70180
+Julia                                          3200          1        320      38720
+Irene                                          2700          1        270      32670
+
+FIRST_NAME                                   SALARY      Bonus     vBonus        PAY
+---------------------------------------- ---------- ---------- ---------- ----------
+James                                          2400          1        240      29040
+Steven                                         2200          1        220      26620
+Laura                                          3300          1        330      39930
+Mozhe                                          2800          1        280      33880
+James                                          2500          1        250      30250
+TJ                                             2100          1        210      25410
+Jason                                          3300          1        330      39930
+Michael                                        2900          1        290      35090
+Ki                                             2400          1        240      29040
+Hazel                                          2200          1        220      26620
+Renske                                         3600          1        360      43560
+Stephen                                        3200          1        320      38720
+John                                           2700          1        270      32670
+Joshua                                         2500          1        250      30250
+Trenna                                         3500          1        350      42350
+Curtis                                         3100          1        310      37510
+Randall                                        2600          1        260      31460
+Peter                                          2500          1        250      30250
+John                                          14000        1.5       7000     173600
+Karen                                         13500        1.4       5400     166050
+Alberto                                       12000        1.4       4800     147600
+Gerald                                        11000        1.4       4400     135300

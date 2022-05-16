@@ -1,0 +1,8 @@
+  1  select EMPLOYEE_ID as "Saben", FIRST_NAME "Name", SALARY "pay"
+  2* from EMPLOYEES
+
+  1  select EMPLOYEE_ID as Sabeon, FIRST_NAME Name, SALARY pay
+  2* from EMPLOYEES
+
+  1  select EMPLOYEE_ID  Sabeon, FIRST_NAME Name, SALARY pay
+  2* from EMPLOYEES

@@ -1,0 +1,29 @@
+  1  select saname as "name", sawon.deptno as "number", dname as "deptName"
+  2  from sawon, dept
+  3* where sawon.deptno = dept.deptno
+SQL> /
+
+name                     number deptName
+-------------------- ---------- --------------------
+류명한                       10 영업부
+깨똥이                       10 영업부
+최진실                       10 영업부
+무궁화                       10 영업부
+무궁화                       10 영업부
+홍길동                       10 영업부
+임꺽정                       20 관리부
+채시라                       20 관리부
+류별나                       20 관리부
+놀기만                       20 관리부
+이순라                       20 관리부
+이순신                       20 관리부
+한국남                       20 관리부
+공부만                       30 총무부
+이성계                       30 총무부
+이미라                       30 총무부
+공부해                       30 총무부
+강감찬                       30 총무부
+김유신                       30 총무부
+채송화                       30 총무부
+
+20 rows selected.

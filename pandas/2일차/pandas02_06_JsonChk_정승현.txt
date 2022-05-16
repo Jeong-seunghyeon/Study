@@ -1,0 +1,11 @@
+## JSON is a format for storing and transporting data.
+ => 데이터를 저장하고 전송하기 위한 포맷형식 입니다.
+
+## JSON is often used when
+	data is sent from a server to a web page.
+
+## What is JSON?
+- JSOn stands for JavaScropt Object Notation
+- JSON is a lightweight data interchange format
+- JSON is language independent *
+- JSON is "self-describing" and easy to understand

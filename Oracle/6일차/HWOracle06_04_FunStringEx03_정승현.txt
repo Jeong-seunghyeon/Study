@@ -1,0 +1,28 @@
+  1  select concat('SQL', 'Tutorial', 'is', 'fun!') as concatenated
+  2* from dual
+SQL> /
+select concat('SQL', 'Tutorial', 'is', 'fun!') as concatenated
+       *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+  1  SELECT CONCAT('SQL', 'Tutorial') AS Concatenated
+  2* from dual
+SQL> /
+
+CONCATENATED
+----------------------
+SQLTutorial
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  select 'SQL' || 'Tutorial' || 'is' || 'fun!' AS Concatenated
+  2* from dual
+SQL> /
+
+CONCATENATED
+----------------------------------
+SQLTutorialisfun!

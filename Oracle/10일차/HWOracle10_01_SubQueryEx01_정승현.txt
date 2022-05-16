@@ -1,0 +1,38 @@
+SQL> select sapay "급여"
+  2  from sawon
+  3  where saname='채시라'
+  4  /
+
+      급여
+----------
+      3400
+
+========================================
+
+
+SQL> select saname "이름", sapay "급여"
+  2  from sawon
+  3  where sapay > 3400
+  4  /
+
+이름                       급여
+-------------------- ----------
+홍길동                     5000
+이순신                     3500
+깨똥이                     4500
+공부만                     4003
+
+
+SQL> select saname "이름", sapay "급여"
+  2  from sawon
+  3  where sapay > (select sapay
+  4  from sawon
+  5  where saname = '채시라')
+  6  /
+
+이름                       급여
+-------------------- ----------
+홍길동                     5000
+이순신                     3500
+깨똥이                     4500
+공부만                     4003

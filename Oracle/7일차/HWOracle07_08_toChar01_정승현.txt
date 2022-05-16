@@ -1,0 +1,19 @@
+SQL> select employee_id, hire_date
+  2  from employees
+  3  where hire_date <'11-DEC-08'
+  4  and rownum < 3;
+where hire_date <'11-DEC-08'
+                 *
+ERROR at line 3:
+ORA-01843: not a valid month
+
+
+SQL> select employee_id, hire_date
+  2  from employees
+  3  where to_char(hire_date, 'DD-MON-RR') < '25-DEC-08'
+  4  and rownum < 3;
+
+EMPLOYEE_ID HIRE_DATE
+----------- ---------------
+        100 2003-6월 -3
+        101 2005-9월 -4

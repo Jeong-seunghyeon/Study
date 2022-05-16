@@ -1,0 +1,40 @@
+SQL> INSERT INTO dept
+  2  VALUES (NULL, '영업부', '서울' )
+  3  /
+
+1 row created.
+
+SQL> INSERT INTO dept
+  2  VALUES (NULL, '관리부', '대전')
+  3  /
+
+1 row created.
+
+
+
+SQL> select * from dept
+  2  /
+
+    DEPTNO DNAME                LOC
+---------- -------------------- --------------------
+           영업부               서울
+           관리부               대전
+
+
+
+SQL> create table dept(
+  2  deptno number(3) NOT NULL,
+  3  dname varchar2(10),
+  4  loc varchar2(10)
+  5  )
+  6  /
+
+Table created.
+
+SQL> INSERT INTO dept
+  2  VALUES (NULL, '영업부', '서울')
+  3  /
+VALUES (NULL, '영업부', '서울')
+        *
+ERROR at line 2:
+ORA-01400: cannot insert NULL into ("HR"."DEPT"."DEPTNO")

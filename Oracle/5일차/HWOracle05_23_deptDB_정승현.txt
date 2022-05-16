@@ -1,0 +1,23 @@
+SQL> insert into dept
+  2  values (10, '영업부', '서울')
+  3  /
+
+1 row created.
+
+SQL> insert into dept
+  2  values (20, '관리부', '대전')
+  3  /
+
+1 row created.
+
+SQL> insert into dept
+  2  values (30, '총무부', '광주')
+  3  /
+
+1 row created.
+
+SQL> insert into dept
+  2  values (40, '전산부', '부산')
+  3  /
+
+1 row created.

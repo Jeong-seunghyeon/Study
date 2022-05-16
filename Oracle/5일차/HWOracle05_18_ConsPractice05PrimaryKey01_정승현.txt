@@ -1,0 +1,36 @@
+  1  create table person04(
+  2  ID varchar2(25),
+  3  LastName varchar2(25),
+  4  FirstName varchar2(25),
+  5  Age int,
+  6  PRIMARY KEY (ID)
+  7* )
+SQL> /
+
+Table created.
+
+
+SQL> insert into person04 (LastName)
+  2  values ('Orange')
+  3  /
+insert into person04 (LastName)
+*
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("HR"."PERSON04"."ID")
+
+
+SQL> insert into person04 (ID)
+  2  values ('Orange')
+  3  /
+
+1 row created.
+
+
+SQL> insert into person04 (ID)
+  2  values ('Orange')
+  3  /
+
+insert into person04 (ID)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (HR.SYS_C007012) violated

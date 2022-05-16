@@ -1,0 +1,62 @@
+연습01
+===========================================================
+
+SQL> create or replace view v_sawonjob02 as
+  2  (select sabun, saname, deptno, sapay
+  3  from sawon_second
+  4  where deptno=10)
+  5  /
+
+View created.
+===========================================================
+
+연습02
+
+===========================================================
+
+  1  create or replace noforce view v_sawonjob03 as
+  2  (select sabun, saname, deptno, sapay
+  3  from sawon_second2
+  4* where deptno=10)
+SQL> /
+from sawon_second2
+     *
+ERROR at line 3:
+ORA-00942: table or view does not exist
+===========================================================
+
+연습03
+
+===========================================================
+
+  1  create or replace force view v_sawonjob03 as
+  2  (select sabun, saname, deptno, sapay
+  3  from sawon_second2
+  4* where deptno=10)
+SQL> /
+
+Warning: View created with compilation errors.
+===========================================================
+연습04
+===========================================================
+
+SQL> select view_name, text
+  2  from user_views;
+
+VIEW_NAME            TEXT
+-------------------- --------------------------------------------------------------------------------
+EMP_DETAILS_VIEW     SELECT
+                       e.employee_id,
+                       e.job_id,
+                       e.manager_id,
+                       e.department_id,
+                       d.locat
+
+V_SAWONJOB02         (select sabun, saname, deptno, sapay
+                     from sawon_second
+                     where deptno=10)
+
+V_SAWONJOB03         (select sabun, saname, deptno, sapay
+                     from sawon_second2
+                     where deptno=10)
+

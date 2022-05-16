@@ -1,0 +1,27 @@
+SQL> SELECT UPPER('SQL Tutorial is FUN!')
+  2  from dual;
+
+UPPER('SQLTUTORIALISFUN!')
+----------------------------------------
+SQL TUTORIAL IS FUN!
+
+
+
+  1  SELECT lower('SQL Tutorial is FUN!')
+  2* from dual
+SQL>
+SQL> /
+
+LOWER('SQLTUTORIALISFUN!')
+----------------------------------------
+sql tutorial is fun!
+
+
+
+  1  SELECT initcap('sQL Tutorial is FUN!')
+  2* from dual
+SQL> /
+
+INITCAP('SQLTUTORIALISFUN!')
+----------------------------------------
+Sql Tutorial Is Fun!

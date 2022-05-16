@@ -1,0 +1,25 @@
+
+  1  create table person02(
+  2  ID varchar2(10),
+  3  LastName varchar2(25),
+  4  FirstName varchar2(25),
+  5  Age int CHECK(Age>= 60 and Age<=90)
+  6* )
+SQL> /
+
+Table created.
+
+SQL> insert into person02
+  2  values (1,1,1,55)
+  3  /
+insert into person02
+*
+ERROR at line 1:
+ORA-02290: check constraint (HR.SYS_C007009) violated
+
+
+SQL> insert into person02
+  2  values (1,1,1,63)
+  3  /
+
+1 row created.

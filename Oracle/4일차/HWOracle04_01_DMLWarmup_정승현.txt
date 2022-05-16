@@ -1,0 +1,35 @@
+  1  create table dept_copy as
+  2  select * from DEPARTMENTS
+  3* where 0=1
+SQL>
+SQL> /
+
+Table created.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  create table EMP_COPY as
+  2  select * from EMPLOYEES
+  3* where 0=1
+SQL> /
+
+Table created.
+
+SQL> select * from tab;
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+COUNTRIES                                                    TABLE
+DEPARTMENTS                                                  TABLE
+DEPT_COPY                                                    TABLE
+EMPLOYEES                                                    TABLE
+EMP_COPY                                                     TABLE
+EMP_DETAILS_VIEW                                             VIEW
+JOBS                                                         TABLE
+JOB_HISTORY                                                  TABLE
+LOCATIONS                                                    TABLE
+MEMBERT01                                                    TABLE
+REGIONS                                                      TABLE
+
+11 rows selected.

@@ -1,0 +1,13 @@
+SQL> select '100,000' - '50,000'
+  2  from dual;
+select '100,000' - '50,000'
+       *
+ERROR at line 1:
+ORA-01722: invalid number
+
+SQL> select TO_NUMBER('100,000','999,999') - TO_NUMBER('50,000','999,999') "NUM01-NUM02"
+  2  from dual;
+
+NUM01-NUM02
+-----------
+      50000

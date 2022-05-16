@@ -1,0 +1,22 @@
+  1  select s1.saname "멘토이름", s1.sabun "멘토사번", s2.saname "멘티이름", s2.sabun "멘티사번"
+  2  from sawon s1, sawon s2
+  3* where s1.sabun = s2.samgr and s2.saname = '한국남'
+SQL> /
+
+멘토이름               멘토사번 멘티이름               멘티사번
+-------------------- ---------- -------------------- ----------
+홍길동                        1 한국남                        2
+
+
+  1  select s1.saname "멘토이름", s1.sabun "멘토사번", s2.saname "멘티이름", s2.sabun "멘티사번"
+  2  from sawon s1
+  3  inner join sawon s2
+  4  on s1.sabun = s2.samgr
+  5* where s2.saname = '한국남'
+SQL> /
+
+멘토이름               멘토사번 멘티이름               멘티사번
+-------------------- ---------- -------------------- ----------
+홍길동                        1 한국남                        2
+
+

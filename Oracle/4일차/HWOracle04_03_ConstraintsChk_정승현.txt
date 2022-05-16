@@ -1,0 +1,17 @@
+## SQL COnstraints [ 제약조건 ] 
+- SQL constraints are used to specify rules for the data in a table.
+-> 기본 형식에 추가되어져서 또다른 기능 설정.
+
+01. NOT NULL - EX ] ID >> Ensures that a column cannot have a NULL value
+02. UNIQUE - EX ] ED >> Ensures that all values in a column are different
+
+03. PRIMARY KEY -  NOT NULL and UNIQUE.
+04. FOREIGN KEY - Prevents actions that would destroy links between tables
+
+05. CHECK - Ensures that the values in a column satisfies a specific condition
+	EX ] 성별 >> 남성 or 여성  >>  중성 X
+
+06. DEFAULT -  EX ] 대전지역의 특산물 소개 >> 특산물 >> 대전시
+		Sets a default value for a column if no value is specified
+
+07. CREATE INDEX - Used to create and retrieve data from the database very quickly

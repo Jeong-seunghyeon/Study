@@ -1,0 +1,33 @@
+SQL> select last_name, to_char(hire_date, 'DD Month YYYY') as hiredate
+  2  from employees
+  3  where rownum < 10;
+
+LAST_NAME                                          HIREDATE
+-------------------------------------------------- --------------------------------
+King                                               17 6월  2003
+Kochhar                                            21 9월  2005
+De Haan                                            13 1월  2001
+Hunold                                             03 1월  2006
+Ernst                                              21 5월  2007
+Austin                                             25 6월  2005
+Pataballa                                          05 2월  2006
+Lorentz                                            07 2월  2007
+Greenberg                                          17 8월  2002
+
+9 rows selected.
+
+
+LAST_NAME                                          HIREDATE
+-------------------------------------------------- --------------------------------
+King                                               17 6월 2003
+Kochhar                                            21 9월 2005
+De Haan                                            13 1월 2001
+Hunold                                             3 1월 2006
+Ernst                                              21 5월 2007
+Austin                                             25 6월 2005
+Pataballa                                          5 2월 2006
+Lorentz                                            7 2월 2007
+Greenberg                                          17 8월 2002
+
+9 rows selected.
+

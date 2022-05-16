@@ -1,0 +1,13 @@
+Machine Learning
+
+getting Started
+Mean Median mode : 평균, 중앙값, 최빈수 << 대표값
+Standard Deviation : 표준편차
+Percentile
+
+Data Distribution : 데이터 분포
+Normal Data Distribution : 정규분포
+Scatter Plot
+Linear Regression : 선형 회귀분석
+Polynomial Regression : 다항 회귀분석
+Multiple Regression : 다중 회귀 분석

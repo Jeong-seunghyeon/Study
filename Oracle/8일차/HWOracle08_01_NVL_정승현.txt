@@ -1,0 +1,63 @@
+ FIRST_NAME                               COMMISSION_PCT
+---------------------------------------- --------------
+Steven
+Neena
+Lex
+Alexander
+Bruce
+David
+Valli
+Diana
+Nancy
+
+9 rows selected.
+
+
+
+=====================================================================================================
+
+
+1  select first_name, (COMMISSION_PCT*0.1) as "COMMISSION_PCT"
+2  from employees
+3* where rownum<10
+SQL> /
+
+FIRST_NAME                               COMMISSION_PCT
+---------------------------------------- --------------
+Steven
+Neena
+Lex
+Alexander
+Bruce
+David
+Valli
+Diana
+Nancy
+
+9 rows selected.
+
+
+=================================================================================
+
+
+
+1  select FIRST_NAME, commission_pct as "bonus", NVL(commission_pct, 0.1 * SALARY) as "vbonus", SALARY, (SALARY*12) as "PAY"
+2  from employees
+3* where rownum<10
+SQL> /
+
+FIRST_NAME                                    bonus     vbonus     SALARY        PAY
+---------------------------------------- ---------- ---------- ---------- ----------
+Steven                                                    2400      24000     288000
+Neena                                                     1700      17000     204000
+Lex                                                       1700      17000     204000
+Alexander                                                  900       9000     108000
+Bruce                                                      600       6000      72000
+David                                                      480       4800      57600
+Valli                                                      480       4800      57600
+Diana                                                      420       4200      50400
+Nancy                                                   1200.8      12008     144096
+
+9 rows selected.
+
+SQL>

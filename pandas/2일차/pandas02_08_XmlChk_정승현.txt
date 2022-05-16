@@ -1,0 +1,10 @@
+What is HTML?
+HTML stands for Hyper Text 			Markup Language
+			Hyper Link (a) <,/,>	명령어 --> 결과
+							└ Algorithm
+
+XML stands for eXtensible Markup Language.
+
+XML was designed to store and transport data.
+
+XML was designed to be both human-and machin-readable.

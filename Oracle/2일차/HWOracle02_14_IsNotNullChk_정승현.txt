@@ -1,0 +1,137 @@
+  1  select FIRST_NAME as "사원명", COMMISSION_PCT as "보너스"
+  2  from EMPLOYEEs
+  3* where COMMISSION_PCT is null
+SQL> /
+
+사원명                                       보너스
+---------------------------------------- ----------
+Steven
+Neena
+Lex
+Alexander
+Bruce
+David
+Valli
+Diana
+Nancy
+Daniel
+John
+Ismael
+Jose Manuel
+Luis
+Den
+Alexander
+Shelli
+Sigal
+Guy
+Karen
+Matthew
+Adam
+Payam
+Shanta
+Kevin
+Julia
+Irene
+
+사원명                                       보너스
+---------------------------------------- ----------
+James
+Steven
+Laura
+Mozhe
+James
+TJ
+Jason
+Michael
+Ki
+Hazel
+Renske
+Stephen
+John
+Joshua
+Trenna
+Curtis
+Randall
+Peter
+Winston
+Jean
+Martha
+Girard
+Nandita
+Alexis
+Julia
+Anthony
+Kelly
+
+사원명                                       보너스
+---------------------------------------- ----------
+Jennifer
+Timothy
+Randall
+Sarah
+Britney
+Samuel
+Vance
+Alana
+Kevin
+Donald
+Douglas
+Jennifer
+Michael
+Pat
+Susan
+Hermann
+Shelley
+William
+
+72 rows selected.
+
+
+
+  1  select FIRST_NAME as "사원명", COMMISSION_PCT as "보너스"
+  2  from EMPLOYEEs
+  3* where COMMISSION_PCT is not null
+SQL> /
+
+사원명                                       보너스
+---------------------------------------- ----------
+John                                             .4
+Karen                                            .3
+Alberto                                          .3
+Gerald                                           .3
+Eleni                                            .2
+Peter                                            .3
+David                                           .25
+Peter                                           .25
+Christopher                                      .2
+Nanette                                          .2
+Oliver                                          .15
+Janette                                         .35
+Patrick                                         .35
+Allan                                           .35
+Lindsey                                          .3
+Louise                                           .3
+Sarath                                          .25
+Clara                                           .25
+Danielle                                        .15
+Mattea                                           .1
+David                                            .1
+Sundar                                           .1
+Amit                                             .1
+Lisa                                            .25
+Harrison                                         .2
+Tayler                                           .2
+William                                         .15
+
+사원명                                       보너스
+---------------------------------------- ----------
+Elizabeth                                       .15
+Sundita                                          .1
+Ellen                                            .3
+Alyssa                                          .25
+Jonathon                                         .2
+Jack                                             .2
+Kimberely                                       .15
+Charles                                          .1
+
+35 rows selected.

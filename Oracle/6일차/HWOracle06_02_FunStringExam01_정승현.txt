@@ -1,0 +1,42 @@
+  1  select CONSTRAINT_NAME, TABLE_NAME
+  2  from USER_CONS_COLUMNS
+  3* where upper(table_name)='SAWON'
+SQL> /
+
+CONSTRAINT_NAME           TABLE_NAME
+------------------------- ---------------
+SYS_C007199               SAWON
+SAWON_SASEX_CK            SAWON
+SYS_C007201               SAWON
+SAWON_DEPTNO_FK           SAWON
+SAWON_DAMGR_FK            SAWON
+
+
+
+  1  select CONSTRAINT_NAME, TABLE_NAME
+  2  from USER_CONS_COLUMNS
+  3* where lower(table_name)='sawon'
+SQL> /
+
+CONSTRAINT_NAME           TABLE_NAME
+------------------------- ---------------
+SYS_C007199               SAWON
+SAWON_SASEX_CK            SAWON
+SYS_C007201               SAWON
+SAWON_DEPTNO_FK           SAWON
+SAWON_DAMGR_FK            SAWON
+
+
+
+  1  select CONSTRAINT_NAME, TABLE_NAME
+  2  from USER_CONS_COLUMNS
+  3* where initcap(table_name)='Sawon'
+SQL> /
+
+CONSTRAINT_NAME           TABLE_NAME
+------------------------- ---------------
+SYS_C007199               SAWON
+SAWON_SASEX_CK            SAWON
+SYS_C007201               SAWON
+SAWON_DEPTNO_FK           SAWON
+SAWON_DAMGR_FK            SAWON

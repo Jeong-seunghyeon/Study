@@ -1,0 +1,5 @@
+select FIRST_NAME as "이름", JOB_ID as "직위", salary as "급여", city as "도시"
+from EMP_DETAILS_VIEW
+where salary in(select salary from EMP_DETAILS_VIEW where city ='Southlake')
+/
+

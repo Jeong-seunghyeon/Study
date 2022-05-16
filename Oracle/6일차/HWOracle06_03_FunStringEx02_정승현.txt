@@ -1,0 +1,13 @@
+  1  select length('SQL Tutorial') AS Length, LENGTH('SQL 공부') AS Length
+  2* from dual
+SQL> /
+
+    LENGTH     LENGTH
+---------- ----------
+        12          6
+
+
+
+    LENGTH     LENGTH
+---------- ----------
+        12         10

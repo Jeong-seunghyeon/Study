@@ -1,0 +1,12 @@
+SQL> alter session set nls_date_format='yyyy.mm.dd';
+
+Session altered.
+
+SQL> select*from datetest;
+
+MYDATE
+----------
+2022.03.04
+2022.03.01
+2022.03.02
+2022.03.03

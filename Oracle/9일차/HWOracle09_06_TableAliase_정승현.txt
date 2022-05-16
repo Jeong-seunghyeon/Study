@@ -1,0 +1,41 @@
+  1  select saname "이름", s.deptno "부서번호", dname "부서이름"
+  2  from sawon s, dept d
+  3* where s.deptno = d.deptno
+SQL> /
+
+이름                   부서번호 부서이름
+-------------------- ---------- --------------------
+류명한                       10 영업부
+깨똥이                       10 영업부
+최진실                       10 영업부
+무궁화                       10 영업부
+무궁화                       10 영업부
+홍길동                       10 영업부
+임꺽정                       20 관리부
+채시라                       20 관리부
+류별나                       20 관리부
+놀기만                       20 관리부
+이순라                       20 관리부
+이순신                       20 관리부
+한국남                       20 관리부
+공부만                       30 총무부
+이성계                       30 총무부
+이미라                       30 총무부
+공부해                       30 총무부
+강감찬                       30 총무부
+김유신                       30 총무부
+채송화                       30 총무부
+
+20 rows selected.
+
+
+SQL> select saname "이름", s.deptno "부서번호", dname "부서이름"
+  2  from sawon s , dept d
+  3  where sawon.deptno = dept.deptno;
+where sawon.deptno = dept.deptno
+                               *
+ERROR at line 3:
+ORA-00904: "DEPT"."DEPTNO": invalid identifier
+
+
+SQL>

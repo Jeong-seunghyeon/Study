@@ -1,0 +1,29 @@
+SQL> conn hr/hr
+Connected.
+SQL> create table dateTest (
+  2  mydate date
+  3  );
+
+Table created.
+
+SQL> select * from tab;
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+COUNTRIES                                                    TABLE
+DATETEST                                                     TABLE
+DEPARTMENTS                                                  TABLE
+DEPT                                                         TABLE
+DEPT_SAMPLE                                                  TABLE
+EMPLOYEES                                                    TABLE
+EMP_DETAILS_VIEW                                             VIEW
+EMP_SAMPLE                                                   TABLE
+JOBS                                                         TABLE
+JOB_HISTORY                                                  TABLE
+LOCATIONS                                                    TABLE
+REGIONS                                                      TABLE
+SAWON                                                        TABLE
+
+13 rows selected.
+
+SQL>

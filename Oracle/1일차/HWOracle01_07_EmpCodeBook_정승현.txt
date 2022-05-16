@@ -1,0 +1,11 @@
+ EMPLOYEE_ID         : 사번
+ FIRST_NAME          : 사원명
+ LAST_NAME          : 사원 성               
+ EMAIL                 : 이메일         
+ PHONE_NUMBER    : 전화번호          
+ HIRE_DATE           : 입사일        
+ JOB_ID                 : 직위 ID          
+ SALARY               : 급여         
+ COMMISSION_PCT  : 보너스             
+ MANAGER_ID        : 멘토          
+ DEPARTMENT_ID    : 부서 번호               

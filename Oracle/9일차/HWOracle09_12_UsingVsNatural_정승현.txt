@@ -1,0 +1,19 @@
+## 컬럼명이 동일한 경우 2가지 pattern
+
+다른 조건 ] 컬럼 type
+
+## NATURAL JOIN : 컬럼명이 동일 + 컬럼명이 type 동일
+
+## USING : 컬럼명이 동일 + 컬럼 type 동일 X
+
+=====================================================================
+  1  select s.saname "직원명", d.dname "부서명", d.loc "부서위치", deptno "부서번호"
+  2  from sawon s join dept d
+  3  using(deptno)
+  4* where s.saname = '홍길동'
+
+============================================================
+
+  1  select saname "이름", dname "부서이름", loc "부서위치", deptno "부서번호"
+  2  from sawon s natural join dept d
+  3* where s.deptno = d.deptno and s.saname = '홍길동'

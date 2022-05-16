@@ -1,0 +1,4 @@
+select saname as "이름", sawon.deptno as "부서번호", dname as "부서이름"
+from sawon, dept
+where sawon.deptno = dept.deptno
+/

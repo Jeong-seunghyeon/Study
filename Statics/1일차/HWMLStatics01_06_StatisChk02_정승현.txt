@@ -1,0 +1,15 @@
+## Descriptive statistics {기술통계 .. 요약 묘사 ] >>
+-01 Location parameter [위치] : Mean value, median, modal value, sum
+-02 Dispersion parameter [산포] : variance[분산], Standard deviation[표준편차], range[범위]
+-03 Frequency tables [밀도] : Absolute, relative and cumulative Frequencies
+-04 Graphics [시각화] : Gistograms, bar charts, box plots, scatter charts, matrix plots
+
+## Inferential statistics [추론통계 _ 추측]
+-01. Simple Test : t-Test
+-02. Regression [회귀분석] _ 선형, 멀티, 로지스틱
+-03. Crrelation [상관분석] _ 피어슨, 스피어맨
+-04. ANOVA
+
+---------------------------------------------------------------
+
+Ex] t-test, which compares two groups/ ANOVA : between more than two groups 

@@ -1,0 +1,20 @@
+SQL> select saname, sahire
+  2  from sawon
+  3  where sahire='08/11/01'
+  4  and rownum < 3;
+
+SANAME               SAHIRE
+-------------------- --------
+한국남               08/11/01
+공부해               08/11/01
+
+
+SQL> select saname, sahire
+  2  from sawon
+  3  where sahire=TO_DATE(20081101, 'YYYYMMDD')
+  4  and rownum < 3;
+
+SANAME               SAHIRE
+-------------------- --------
+한국남               08/11/01
+공부해               08/11/01

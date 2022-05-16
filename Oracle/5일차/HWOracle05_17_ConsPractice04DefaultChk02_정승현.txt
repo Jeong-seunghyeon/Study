@@ -1,0 +1,21 @@
+SQL> create table dept(
+  2  deptno number(3),
+  3  dname varchar2(10) DEFAULT '영업부',
+  4  loc varchar2(10)
+  5  )
+  6  /
+
+Table created.
+
+SQL> insert into dept (deptno, loc)
+  2  values (10, '서울')
+  3  /
+
+1 row created.
+
+SQL> select * from dept
+  2  /
+
+    DEPTNO DNAME                LOC
+---------- -------------------- --------------------
+        10 영업부               서울

@@ -1,0 +1,43 @@
+  1  select saname "이름", sapay "급여", sajob "직급"
+  2  from sawon
+  3  where sapay < (select max(sapay) from sawon
+  4  where sajob='대리') and
+  5* sajob != '대리'
+SQL> /
+
+이름                       급여 직급
+-------------------- ---------- --------------------
+이순라                     1200 사원
+놀기만                     2300 과장
+류별나                     1600 과장
+임꺽정                     2200 사원
+무궁화                     1100 사원
+공부해                     1303 사원
+최진실                     2000 사원
+김유신                      400 사원
+강감찬                     1003 사원
+
+9 rows selected.
+
+
+  1  select saname "이름", sapay "급여", sajob "직급"
+  2  from sawon
+  3  where sapay < any (select distinct sapay from sawon
+  4  where sajob = '대리')
+  5  and
+  6* sajob != '대리'
+SQL> /
+
+이름                       급여 직급
+-------------------- ---------- --------------------
+김유신                      400 사원
+강감찬                     1003 사원
+무궁화                     1100 사원
+이순라                     1200 사원
+공부해                     1303 사원
+류별나                     1600 과장
+최진실                     2000 사원
+임꺽정                     2200 사원
+놀기만                     2300 과장
+
+9 rows selected.

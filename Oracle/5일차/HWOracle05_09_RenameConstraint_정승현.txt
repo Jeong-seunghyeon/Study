@@ -1,0 +1,28 @@
+  1  alter table CUSTOMER
+  2* rename constraint SYS_C006998 to CUSTOMER01_PWD_NN
+SQL> /
+
+
+
+Table altered.
+  1  alter table CUSTOMER
+  2* rename constraint SYS_C006999 to CUSTOMER01_NAME_NN
+SQL> /
+
+Table altered.
+
+
+
+
+
+
+
+  1  select OWNER, CONSTRAINT_NAME, TABLE_NAME, COLUMN_NAME
+  2  from user_cons_columns
+  3* where table_name ='CUSTOMER'
+SQL> /
+
+OWNER           CONSTRAINT_NAME           TABLE_NAME      COLUMN_NAME
+--------------- ------------------------- --------------- --------------------
+HR              CUSTOMER01_PWD_NN         CUSTOMER        PWD
+HR              CUSTOMER01_NAME_NN        CUSTOMER        NAME

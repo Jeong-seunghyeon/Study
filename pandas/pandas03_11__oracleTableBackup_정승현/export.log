@@ -1,0 +1,44 @@
+;;; 
+Export: Release 11.2.0.2.0 - Production on 월 4월 11 16:59:54 2022
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+Starting "HR"."SYS_EXPORT_SCHEMA_01":  hr/******** directory=tableBackup dumpfile=hr.dmp 
+Estimate in progress using BLOCKS method...
+Processing object type SCHEMA_EXPORT/TABLE/TABLE_DATA
+Total estimation using BLOCKS method: 4.75 MB
+Processing object type SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA
+Processing object type SCHEMA_EXPORT/SEQUENCE/SEQUENCE
+Processing object type SCHEMA_EXPORT/TABLE/TABLE
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/INDEX
+Processing object type SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processing object type SCHEMA_EXPORT/TABLE/COMMENT
+Processing object type SCHEMA_EXPORT/PROCEDURE/PROCEDURE
+Processing object type SCHEMA_EXPORT/PROCEDURE/ALTER_PROCEDURE
+Processing object type SCHEMA_EXPORT/VIEW/VIEW
+Processing object type SCHEMA_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+Processing object type SCHEMA_EXPORT/TABLE/TRIGGER
+Processing object type SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+. . exported "HR"."ZIPCODE"                              3.054 MB   52144 rows
+. . exported "HR"."COUNTRIES"                            6.367 KB      25 rows
+. . exported "HR"."DATETEST"                             5.046 KB       4 rows
+. . exported "HR"."DEPARTMENTS"                          7.007 KB      27 rows
+. . exported "HR"."DEPT"                                 5.929 KB       4 rows
+. . exported "HR"."EMPLOYEES"                            16.80 KB     107 rows
+. . exported "HR"."GOGEK"                                7.078 KB      10 rows
+. . exported "HR"."JOBS"                                 6.992 KB      19 rows
+. . exported "HR"."JOB_HISTORY"                          7.054 KB      10 rows
+. . exported "HR"."LOCATIONS"                            8.273 KB      23 rows
+. . exported "HR"."MEMBERT01"                            7.429 KB       8 rows
+. . exported "HR"."REGIONS"                              5.476 KB       4 rows
+. . exported "HR"."SAWON"                                8.898 KB      20 rows
+. . exported "HR"."DEPT_SAMPLE"                              0 KB       0 rows
+. . exported "HR"."EMP_SAMPLE"                               0 KB       0 rows
+. . exported "HR"."SALGRADE"                                 0 KB       0 rows
+Master table "HR"."SYS_EXPORT_SCHEMA_01" successfully loaded/unloaded
+******************************************************************************
+Dump file set for HR.SYS_EXPORT_SCHEMA_01 is:
+  C:\_ORACLETABLEBACKUP\HR.DMP
+Job "HR"."SYS_EXPORT_SCHEMA_01" successfully completed at 17:00:11

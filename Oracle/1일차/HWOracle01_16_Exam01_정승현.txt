@@ -1,0 +1,18 @@
+1    select EMPLOYEE_ID, FIRST_NAME, DEPARTMENT_ID, JOB_ID
+  2    from EMPLOYEEs
+  3*   where DEPARTMENT_ID = '100' and JOB_ID = 'AC_MGR'
+
+
+  1    select EMPLOYEE_ID, FIRST_NAME, DEPARTMENT_ID, JOB_ID
+  2    from EMPLOYEEs
+  3*   where DEPARTMENT_ID = '100' and JOB_ID = 'SA_MAN'
+
+
+  1    select EMPLOYEE_ID, FIRST_NAME, SALARY, DEPARTMENT_ID, JOB_ID
+  2    from EMPLOYEEs
+  3*   where SALARY >2500 and SALARY < 3000
+
+
+  1    select EMPLOYEE_ID, FIRST_NAME, DEPARTMENT_ID, JOB_ID
+  2    from EMPLOYEEs
+  3*   where not DEPARTMENT_ID = 100 and not JOB_ID = 'AC_MGR'

@@ -1,0 +1,25 @@
+  1  select substr('SQL Tutorial',5,3) AS ExtractStirng
+  2* from dual
+SQL> /
+
+EXTRAC
+------
+Tut
+
+
+  1  select substr('SQL Tutorial',-5,3) AS ExtractString
+  2* from dual
+SQL> /
+
+EXTRAC
+------
+ori
+
+
+  1  select instr('W3Schools.com','3') AS MatchPosition
+  2* from dual
+SQL> /
+
+MATCHPOSITION
+-------------
+            2

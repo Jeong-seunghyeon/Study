@@ -1,0 +1,3 @@
+select 10 + 40
+from EMPLOYEEs
+/

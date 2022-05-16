@@ -1,0 +1,20 @@
+HWHtmlCssJas02_02_bitChk_정승현.txt
+
+<!doctype html>
+<html lang='en'>
+ <head>
+  <meta charset='UTF-8'>
+  
+  <title>HTML 2일차 : Hrex01.html</title>
+</head>
+<body>
+
+<img src="./../img1/Indonesia-Java-Bromo-volcano-night-stars_iphone_640x960.gif"
+     alt="브로모 화산 이미지">
+<pre>
+
+</pre>
+
+
+ </body>
+</html>

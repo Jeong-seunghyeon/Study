@@ -1,0 +1,15 @@
+SQL> select sabun "사번", saname "이름", deptno "부서번호"
+  2  from sawon
+  3  where deptno < all (select distinct deptno from sawon);
+
+no rows selected
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  select sabun "사번", saname "이름", deptno "부서번호"
+  2  from sawon
+  3* where deptno > all (select distinct deptno from sawon)
+SQL> /
+
+no rows selected

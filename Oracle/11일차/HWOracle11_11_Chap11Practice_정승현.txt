@@ -1,0 +1,54 @@
+1번
+===============================================================
+
+SQL> create view v_sawon_dno as
+  2  select sabun, saname, deptno
+  3  from sawon_second
+  4  where deptno=20;
+
+View created.
+
+SQL> select view_name, text
+  2  from user_views;
+
+VIEW_NAME            TEXT
+-------------------- --------------------------------------------------------------------------------
+EMP_DETAILS_VIEW     SELECT
+                       e.employee_id,
+                       e.job_id,
+                       e.manager_id,
+                       e.department_id,
+                       d.locat
+
+V_SAWONJOB01         select sabun, saname, sajob
+                     from sawon_second
+                     where sajob='사원'
+
+V_SAWON_DNO          select sabun, saname, deptno
+                     from sawon_second
+                     where deptno=20
+
+V_SAWONJOB_CHK       select sabun,saname,deptno,sajob
+                     from sawon_second
+                     where sajob='과장' with che
+
+===============================================================
+
+2번
+===============================================================
+
+SQL> create or replace view v_sawon_dno as
+  2  select sabun,saname, deptno, sapay
+  3  from sawon_second
+  4  where deptno=20;
+
+View created.
+===============================================================
+
+3번
+===============================================================
+
+SQL> drop view v_sawon_dno;
+
+View dropped.
+

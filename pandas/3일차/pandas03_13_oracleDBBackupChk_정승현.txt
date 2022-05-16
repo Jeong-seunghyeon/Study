@@ -1,0 +1,10 @@
+expdp hr/hr directory=tablebackup dumpfile = hr.dmp
+
+hr계정에 테이블 백업
+
+impdp hr/hr directory=tablebackup dumpfile = hr.dmp
+
+백업해논 데이터를 hr계정에 import
+
+
+

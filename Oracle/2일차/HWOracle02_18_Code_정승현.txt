@@ -1,0 +1,18 @@
+--01
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+
+
+--02
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+--01
+INSERT INTO memberT01 (mem_id, mem_pwd)
+VALUES('Orange', '1234');
+
+--02
+INSERT INTO memberT01
+VALUES ('오렌지', 'Orange', '1234','Orange@test.com', '042', '우송대');

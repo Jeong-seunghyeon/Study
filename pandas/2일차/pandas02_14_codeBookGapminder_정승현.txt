@@ -1,0 +1,6 @@
+country : 국가명
+continent : 대륙명
+year : 연도
+lifeExp : 기대수명
+pop : 인구
+gdpPercap : 소득

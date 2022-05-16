@@ -1,0 +1,28 @@
+SQL> select saname 이름, to_char(sapay, '$999,999') 급여
+  2  from sawon
+  3  where rownum < 3
+  4  ;
+
+이름                 급여
+-------------------- ------------------
+홍길동                  $5,000
+한국남                  $3,000
+
+
+SQL> select saname 이름, to_char(sapay, 'L999,999') 급여
+  2  from sawon
+  3  where rownum < 3;
+
+이름                 급여
+-------------------- ------------------------------------
+홍길동                         ￦5,000
+한국남                         ￦3,000
+
+
+SQL> select saname 이름, to_char(sapay, '\999,999') 급여
+  2  from sawon
+  3  where rownum < 3;
+select saname 이름, to_char(sapay, '\999,999') 급여
+                                     *
+ERROR at line 1:
+ORA-01481: invalid number format model

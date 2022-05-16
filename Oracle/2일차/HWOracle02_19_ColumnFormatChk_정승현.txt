@@ -1,0 +1,13 @@
+column mem_id format a10
+column mem_pwd format a10
+column mem_name format a10
+column mem_addr format a10
+column mem_phone format a10
+column mem_email format a17
+
+
+MEM_NAME   MEM_ID     MEM_PWD    MEM_EMAIL         MEM_PHONE  MEM_ADDR
+---------- ---------- ---------- ----------------- ---------- ----------
+           Orange     1234
+           Orange     1234
+？ㅻ젋吏？ Orange     1234       Orange@test.com   042        ？곗넚？？

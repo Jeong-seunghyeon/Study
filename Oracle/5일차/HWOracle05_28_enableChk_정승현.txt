@@ -1,0 +1,30 @@
+SQL> alter table dept
+  2  enable constraint dept_deptno_pk;
+
+Table altered.
+
+SQL> alter table sawon\
+  2  .
+SQL> /
+alter table sawon\
+                 *
+ERROR at line 1:
+ORA-00911: invalid character
+
+
+SQL> alter table sawon
+  2  enable constraint sawon_deptno_fk;
+enable constraint sawon_deptno_fk
+                  *
+ERROR at line 2:
+ORA-02298: cannot validate (HR.SAWON_DEPTNO_FK) - parent keys not found
+
+
+SQL> insert into dept values(20,'관리부','대전');
+
+1 row created.
+
+SQL> alter table sawon
+  2  enable constraint sawon_deptno_fk;
+
+Table altered.

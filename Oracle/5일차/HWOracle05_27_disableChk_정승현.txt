@@ -1,0 +1,39 @@
+SQL> alter table dept
+  2  disable constraint dept_deptno_pk;
+alter table dept
+*
+ERROR at line 1:
+ORA-02297: cannot disable constraint (HR.DEPT_DEPTNO_PK) - dependencies exist
+
+
+SQL> alter table dept
+  2  /
+alter table dept
+               *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SQL> alter table sawon
+  2  disable constraint sawon_deptno_fk;
+
+Table altered.
+
+SQL> alter table dept
+  2  disable constraint dept_deptno_pk;
+
+Table altered.
+
+SQL> delete dept
+  2  where deptno=20
+  3  /
+
+1 row deleted.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                LOC
+---------- -------------------- --------------------
+        10 영업부               서울
+        30 총무부               광주
+        40 전산부               부산

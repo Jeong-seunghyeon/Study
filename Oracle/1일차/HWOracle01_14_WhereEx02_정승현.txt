@@ -1,0 +1,4 @@
+  select EMPLOYEE_ID,FIRST_NAME,JOB_ID,HIRE_DATE
+  from EMPLOYEEs
+  where HIRE_DATE < '07/12/07'
+/

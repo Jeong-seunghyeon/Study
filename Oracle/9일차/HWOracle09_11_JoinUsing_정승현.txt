@@ -1,0 +1,43 @@
+  1  select saname "이름", dname "부서이름", loc "부서위치", dept.deptno "부서번호"
+  2  from sawon
+  3  join dept
+  4  on sawon.deptno = dept.deptno
+  5* where saname = '홍길동'
+SQL> /
+
+이름                 부서이름             부서위치               부서번호
+-------------------- -------------------- -------------------- ----------
+홍길동               영업부               서울                         10
+
+
+
+  1  select saname "이름", dname "부서이름", loc "부서위치", dept.deptno "부서번호"
+  2  from sawon
+  3  inner join dept
+  4  on sawon.deptno = dept.deptno
+  5* where saname = '홍길동'
+SQL> /
+
+이름                 부서이름             부서위치               부서번호
+-------------------- -------------------- -------------------- ----------
+홍길동               영업부               서울                         10
+
+
+  1  select saname "이름", dname "부서이름", loc "부서위치", dept.deptno "부서번호"
+  2  from sawon, dept
+  3* where sawon.deptno = dept.deptno and sawon.saname = '홍길동'
+SQL> /
+
+이름                 부서이름             부서위치               부서번호
+-------------------- -------------------- -------------------- ----------
+홍길동               영업부               서울                         10
+
+  1  select s.saname "직원명", d.dname "부서명", d.loc "부서위치", deptno "부서번호"
+  2  from sawon s join dept d
+  3  using(deptno)
+  4* where s.saname = '홍길동'
+SQL> /
+
+직원명               부서명               부서위치               부서번호
+-------------------- -------------------- -------------------- ----------
+홍길동               영업부               서울                         10

@@ -1,0 +1,15 @@
+Species : 종
+Weight : 체중
+Length : 길이
+Height : 높이
+Width : 너비
+
+Species
+
+1) brean >> 도미
+2) smelt >> 빙어
+3) perch >> 농어
+4) pike >> 강꼬치고기(민물 바라쿠다)
+5) roach >> 잉어
+6) whitefish >> 흰살생선, 송어
+7) parkki >> 청돔 [곤들매기]

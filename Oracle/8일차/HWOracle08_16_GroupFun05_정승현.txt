@@ -1,0 +1,7 @@
+  1  select count(distinct sajob) as "직위종류"
+  2* from sawon
+SQL> /
+
+  직위종류
+----------
+         5

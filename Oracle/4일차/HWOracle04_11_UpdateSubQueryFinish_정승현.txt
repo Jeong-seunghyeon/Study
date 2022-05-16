@@ -1,0 +1,16 @@
+update dept_copy
+set LOCATION_ID = (select LOCATION_ID from dept_copy
+where DEPARTMENT_ID = 20)
+where DEPARTMENT_ID = 10
+
+
+1 row updated.
+
+
+
+select LOCATION_ID from dept_copy
+where DEPARTMENT_ID = 10
+
+LOCATION_ID
+-----------
+       1800

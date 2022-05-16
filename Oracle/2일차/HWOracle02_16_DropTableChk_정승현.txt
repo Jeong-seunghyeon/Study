@@ -1,0 +1,40 @@
+SQL> drop table memberT01
+  2
+SQL> /
+
+Table dropped.
+
+SQL> select * from tab;
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+BIN$+vgCqg/YR0S7z8roue2rPg==$0                               TABLE
+COUNTRIES                                                    TABLE
+DEPARTMENTS                                                  TABLE
+EMPLOYEES                                                    TABLE
+EMP_DETAILS_VIEW                                             VIEW
+JOBS                                                         TABLE
+JOB_HISTORY                                                  TABLE
+LOCATIONS                                                    TABLE
+REGIONS                                                      TABLE
+
+9 rows selected.
+
+SQL> purge recyclebin;
+
+Recyclebin purged.
+
+SQL> select * from tab;
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+COUNTRIES                                                    TABLE
+DEPARTMENTS                                                  TABLE
+EMPLOYEES                                                    TABLE
+EMP_DETAILS_VIEW                                             VIEW
+JOBS                                                         TABLE
+JOB_HISTORY                                                  TABLE
+LOCATIONS                                                    TABLE
+REGIONS                                                      TABLE
+
+8 rows selected.

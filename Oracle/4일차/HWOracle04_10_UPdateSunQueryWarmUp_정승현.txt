@@ -1,0 +1,18 @@
+  1  select LOCATION_ID from dept_copy
+  2* where DEPARTMENT_ID = 10
+SQL> /
+
+LOCATION_ID
+-----------
+       1000
+
+
+
+
+  1  select LOCATION_ID from dept_copy
+  2* where DEPARTMENT_ID = 20
+  3  /
+
+LOCATION_ID
+-----------
+       1800

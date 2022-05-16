@@ -1,0 +1,16 @@
+  1  create or replace view v_sawonjob_readonly as
+  2  (select sabun, saname, deptno, sajob
+  3  from sawon_second
+  4* where sajob='부장') with read only
+SQL> /
+
+View created.
+
+
+
+SQL> insert into v_sawonjob_readonly
+  2  values(60, '장미', 30, '부장');
+insert into v_sawonjob_readonly
+*
+ERROR at line 1:
+ORA-42399: cannot perform a DML operation on a read-only view

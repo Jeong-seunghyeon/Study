@@ -1,0 +1,90 @@
+1번
+============================================================
+
+  1  create table sawon10(
+  2  sabun number(4),
+  3  saname varchar2(10),
+  4  deptno number(4),
+  5  sapay number(10)
+  6* )
+SQL> /
+
+Table created.
+
+SQL> insert into sawon10(
+  2  select sabun, saname, deptno, sapay
+  3  from sawon
+  4  where deptno=10)
+  5  /
+
+6 rows created.
+
+SQL> select * from sawon10
+  2  /
+
+     SABUN SANAME                   DEPTNO      SAPAY
+---------- -------------------- ---------- ----------
+         1 홍길동                       10       5000
+        13 무궁화                       10       3000
+        20 깨똥이                       10       4500
+        12 류명한                       10       1800
+         9 무궁화                       10       1100
+        15 최진실                       10       2000
+
+6 rows selected.
+============================================================
+
+
+2번
+============================================================
+  1  create table saAvgT01(
+  2  sajob varchar2(6),
+  3  sapay number(10)
+  4* )
+SQL> /
+
+Table created.
+
+SQL> insert into saAvgT01(
+  2  select sajob, avg(sapay)
+  3  from sawon
+  4  group by sajob)
+  5  /
+
+5 rows created.
+
+SQL> select * from saAvgT01;
+
+SAJOB             SAPAY
+------------ ----------
+과장               3181
+대리               2002
+회장               5000
+부장               2934
+사원               1576
+============================================================
+
+3번
+
+============================================================
+
+SQL> create table saAvgT02(
+  2  avgSapay number(10)
+  3  )
+  4  /
+
+Table created.
+
+SQL> insert into saAvgT02(
+  2  select avg(sapay)
+  3  from sawon
+  4  )
+  5  /
+
+1 row created.
+
+SQL> select * from saAvgT02;
+
+  AVGSAPAY
+----------
+      2416

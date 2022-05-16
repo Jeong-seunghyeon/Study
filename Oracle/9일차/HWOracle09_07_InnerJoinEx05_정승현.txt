@@ -1,0 +1,19 @@
+  1  select saname "직원명", dname "부서명", loc "부서위치", dept.deptno "부서번호"
+  2  from sawon, dept
+  3* where saname = '홍길동' and sawon.deptno = dept.deptno
+SQL> /
+
+직원명               부서명               부서위치               부서번호
+-------------------- -------------------- -------------------- ----------
+홍길동               영업부               서울                         10
+
+
+
+  1  select saname "직원명", dname "부서명", loc "부서위치", d.deptno "부서번호"
+  2  from sawon s, dept d
+  3* where saname = '홍길동' and s.deptno = d.deptno
+SQL> /
+
+직원명               부서명               부서위치               부서번호
+-------------------- -------------------- -------------------- ----------
+홍길동               영업부               서울                         10

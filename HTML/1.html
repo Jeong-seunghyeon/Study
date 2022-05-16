@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+var vText = ''
+
+function mInit(){
+    taObj = document.getElementById("ta")
+    vText = document.getElementById("ta").value
+    mChangeText()
+}
+
+i = 0
+vSpeed=500;
+
+function mChangeText(){
+    if(i<vText.length){
+        taObj.value = vText.substring(0,i);
+        i++
+        setTimeout(mChangeText,vSpeed);
+    }
+}

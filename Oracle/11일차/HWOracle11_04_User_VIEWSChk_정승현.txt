@@ -1,0 +1,21 @@
+SQL> select text from user_views;
+
+TEXT
+--------------------------------------------------------------------------------
+SELECT
+  e.employee_id,
+  e.job_id,
+  e.manager_id,
+  e.department_id,
+  d.locat
+
+select sabun, saname, deptno, sapay
+from sawon
+where deptno=10
+
+(select sabun, saname, deptno, sajob
+from sawon_second
+where sajob='사원')
+
+(select sawon.saname, dept.dname, dept.loc
+from sawon_second sawon, dept_second

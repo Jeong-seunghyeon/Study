@@ -1,0 +1,6 @@
+MEM_NAME   MEM_ID     MEM_PWD    MEM_EMAIL         MEM_PHONE  MEM_ADDR
+---------- ---------- ---------- ----------------- ---------- ----------
+오렌지     orange     1234       orange@test.com   043        우송대
+개나리     yellow     1234       yellow@test.com   062        전남대
+소나무     green      1234       green@test.com    043        우송대
+바다       blue       1234       blue@test.com     062        전남대

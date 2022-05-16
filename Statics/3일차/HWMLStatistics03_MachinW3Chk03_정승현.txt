@@ -1,0 +1,22 @@
+** Data Set
+- In the mind of a computer,
+  a data set is any collection of data.
+  It can be anything from an array to complete database.
+=> collection Type, File, DB...
+=> 데이터로부터 찾은 결과 ==> 예측
+
+
+EX] [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+01. average => 80 ~ 90
+02. highest value and the lowest value
+03. most popular color is white, oldest car is 17 years
+
+That is what Machine Learning is for !
+ Analyzing data and predicting the outcome!
+
+
+* In Machine Learning it is common to work with very large data sets.
+
+In this tutorial we will try to make it as easy as possible to understand the different concepts of machine learning,
+ and we will work with small easy-to-understand data sets.

@@ -1,0 +1,85 @@
+
+SQL> insert into gogek
+  2  values (1,'뷰민','123-1234','700113-1537915',3)
+  3  /
+
+1 row created.
+
+SQL> insert into gogek
+  2  values (2, '강민','343-1455','690216-1627914',2)
+  3  /
+
+1 row created.
+
+SQL> insert into gogek
+  2  values (3,'영희','144-1655','750320-2636215',null);
+
+1 row created.
+
+SQL> insert into gogek
+  2  values (4,'철이','673-1674','770430-1234567',4)
+  3  /
+
+1 row created.
+
+SQL> insert into gogek
+  2  values (5,'뷰완','123-1674','720521-1123675',3)
+  3  /
+
+1 row created.
+
+SQL> insert into gogek
+  2  values (6,'캔디','673-1764','720521-11234675',null)
+  3  /
+values (6,'캔디','673-1764','720521-11234675',null)
+                              *
+ERROR at line 2:
+ORA-12899: value too large for column "HR"."GOGEK"."GOJUMIN" (actual: 15, maximum: 14)
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  insert into gogek
+  2* values (6,'캔디','673-1764','720521-1123675',null)
+SQL> /
+
+1 row created.
+
+SQL> insert into gogek
+  2  values (7,'똘이','176-7677','650725-2534566',7)
+  3  /
+
+1 row created.
+
+SQL> insert into gogek
+  2  values (8,'쇠돌','673-6774','800804-1346574','9)
+  3  /
+ERROR:
+ORA-01756: quoted string not properly terminated
+
+
+SQL> ㄷㅇ
+SP2-0042: unknown command "ㄷㅇ" - rest of line ignored.
+SQL> ed
+Wrote file afiedt.buf
+
+  1  insert into gogek
+  2* values (8,'쇠돌','673-6774','800804-1346574',9)
+SQL> /
+
+1 row created.
+
+SQL> values (8,'쇠돌','673-6774','800804-1346574','9)
+SP2-0734: unknown command beginning "values (8,..." - rest of line ignored.
+SQL> insert into gogek
+  2  values (9,'홍이','767-1234','731225-1234689',13)
+  3  /
+
+1 row created.
+
+SQL> insert into gogek
+  2  values(10,'안나','767-1677','751015-2432168',4)
+  3  /
+
+1 row created.
